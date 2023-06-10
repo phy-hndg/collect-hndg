@@ -33,7 +33,7 @@ $(window).on('load',function(){
     $("#splash").delay(1500).fadeOut('slow',function(){//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
 
 var imgfile = '../../resources/img/';
-var htmlfile = 'html/';
+var htmlfile = '../../html/';
 
 
 var galleryList = document.getElementById("galleryList");
