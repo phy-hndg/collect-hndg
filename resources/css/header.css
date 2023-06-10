@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+body {
+    /* フォントの設定 */
+    font-family: 'Nunito',/*英語*/
+                 'M PLUS Rounded 1c',/*日本語*/
+                 'NanumSquareRound',/*韓国語*/
+                 'Jua',/*韓国語*/
+                 'Noto Color Emoji',/*絵文字*/
+                  sans-serif;
+  }
+
+a {
+    /* リンクの下線を消す */
+    text-decoration: none;
+  }
+
+header {
+width: 100%;
+}
+
+.container-box {
+    width: 100%;
+    height: 10%;
+    /* グラデーション未対応ウィンドウの場合の色 */
+    background: #e098fd;
+    /* グラデーション背景色 */
+    background: linear-gradient(50deg, #fd98d8 20%, #42e1fd 100%);
+    /* 角丸設定 */
+    border-radius: 0px 0px 120px 120px;
+}
+
+.text-area {
+    /* 子要素を水平方向の中央に配置する */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-area a {
+    /* 並列に並べる（次の要素を右へ） */
+    float: left;
+    width: 15%;
+    /* 文字の中央揃え */
+    position: relative;
+    top: 10;
+}
+
+/* aタグをホバーしたとき */
+.header-a:hover {
+    /* ふわっと表示 */
+    animation-name:zoomInAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+}
+
+.header-a p {
+    /* 文字色 */
+    color: rgba(255, 255, 255, 0.925);
+    /* 中央揃え */
+    text-align: center;
+    font-size: 15px;
+}
+
+@media screen and (max-width:840px) {
+    .header-a p {
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:600px) {
+    .header-a p {
+        font-size: 1vw;
+    }
+}
+
+/* ===アニメーション=== */
+
+/* ふわっとアニメーション */
+@keyframes zoomInAnime{
+    from {
+      transform: scale(0.6);
+    }
+  
+    to {
+        transform: scale(1);
+    }
+  }

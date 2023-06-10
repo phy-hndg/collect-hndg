@@ -1,0 +1,279 @@
+@charset "UTF-8";
+
+body {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      background: linear-gradient(50deg, #fd98d8 20%, #42e1fd 100%);/*画面遷移のため遷移アニメーションと同じ色を指定*/
+}
+
+body.appear{
+  background:#fff;/*画面を開いた後の背景色を指定*/
+}
+
+ /* img要素を親要素の中に収めるために最大の幅を高さを自動で合わせる設定 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ /* img要素を親要素の中に収めるために最大の幅を高さを自動で合わせる設定 */
+ video {
+  max-width: 100%;
+  height: auto;
+}
+
+/*========= ローディング画面のためのCSS ===============*/
+#splash {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(50deg, #fd98d8 20%, #42e1fd 100%);
+	z-index: 9999999;
+	text-align:center;
+	color:#fff;
+}
+
+#splash-logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/*画面遷移アニメーション*/
+.splashbg1,
+.splashbg2{
+    display: none;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg1,
+body.appear .splashbg2{
+	display:block;
+}
+/*右に消えるエリア*/
+body.appear .splashbg1{
+	animation-name:PageAnime;
+	animation-duration:1.2s;
+	animation-timing-function:ease-in-out;
+	animation-fill-mode:forwards;
+    content: "";
+    position:fixed;
+	z-index: 999;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+	left:50%;
+    transform: scaleX(1);
+    background-color:  linear-gradient(50deg, #fd98d8 20%, #42e1fd 100%);;/*伸びる背景色の設定*/
+}
+
+@keyframes PageAnime{
+	0% {
+		transform-origin:left;
+		transform:scaleX(1);
+	}
+	50% {
+		transform-origin:right;
+	}
+	100% {
+		transform-origin:right;
+		transform:scaleX(0);
+	}
+}
+
+/*左に消えるエリア*/
+body.appear .splashbg2{
+	animation-name:PageAnime2;
+	animation-duration:1.2s;
+	animation-timing-function:ease-in-out;
+	animation-fill-mode:forwards;
+    content: "";
+    position:fixed;
+	z-index: 999;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+	right:50%;
+    transform: scaleX(1);
+    background-color: linear-gradient(50deg, #fd98d8 20%, #42e1fd 100%);;/*伸びる背景色の設定*/
+}
+
+@keyframes PageAnime2{
+	0% {
+		transform-origin:right;
+		transform:scaleX(1);
+	}
+
+	50% {
+		transform-origin:left;
+	}
+	100% {
+		transform-origin:left;
+		transform:scaleX(0);
+	}
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#container{
+	opacity: 0;/*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container{
+	animation-name:PageAnimeAppear;
+	animation-duration:1s;
+	animation-delay:0.2s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
+}
+
+
+/* =====以下からメインコンテンツ===== */
+/* 親要素 */
+.warpper {
+  /* ヘッダーとの空白確保 */
+  padding: 10%;
+}
+
+/* コンテナ要素定義 */
+.contener {
+  width: 80%;
+  max-width: 900px;
+  height: 90%;
+  /* background-color: blue; */
+  /* 水平方向の中央揃え */
+  margin: 0 auto;
+  /* 影設定 */
+  box-shadow: 0 10px 25px 0 rgba(72, 38, 126, 0.37);
+  /* 角丸設定 */
+  border-radius: 5px;
+}
+
+/* 画像表示領域定義 */
+.display {
+  position: relative; 
+  /* width: 30%; */
+  height: 30%;
+  /* 画像を親要素から10%縮小したエリアに表示 */
+  padding: 5%;
+  /* position: relative; */
+  /* background-image: url(../resource/img/test.jpg); */
+}
+
+.container-caption-warpper {
+  margin: 0px 10px;
+  margin-bottom: 10%;
+  padding: 0% 5%;
+}
+
+.container-caption {
+  width: 100%;
+  height: 100%;
+  /* グリッドの設定 */
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1fr minmax(25px , 25%);
+  grid-template-rows: minmax(10px , 10%) minmax(10px , 10%) auto auto;
+  /* gap: 10px; */
+  grid-template-areas: 
+  "d d d i"
+  "p s s i"
+  "t t t t"
+  "c c c c";
+  /* padding: 0% 10%; */
+}
+
+/* 日付ここから⇒ */
+#data {
+  grid-area: d;
+  padding-bottom: 10%;
+}
+
+.date-text {
+  font-size:min(2vw,30px);
+  color: #616161;
+  white-space: nowrap;
+}
+/* ⇐日付ここまで */
+
+/* urlここから⇒ */
+/* .url {
+    grid-area: l;
+    margin-left: 5%;
+} */
+
+/* .url a {
+  font-size: x-small;
+  margin-top: 10%;
+} */
+/* ⇐urlここまで */
+
+/* いいねここから⇒ */
+.iin-area {
+    grid-area: i;
+}
+
+.iin {
+  width: 100%;
+  height:100%;
+}
+
+.iin img {
+  width: 100%;
+  height:100%;
+  object-fit: scale-down;
+}
+
+.iin:active {
+  /* ふわっと表示 */
+  animation-name:zoomInAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+}
+/* ⇐いいねここまで */
+
+/* platformエリア */
+#platform {
+  grid-area: p;
+  font-size: 100%;
+  font-weight: bold;
+}
+
+/* senderエリア */
+#sender {
+  grid-area: s;
+  font-size: 100%;
+  font-weight: bold;
+}
+
+
+/* タグエリア */
+#tag {
+  grid-area: t;
+  font-size: small;
+  color: #616161;
+}
+
+
+
+/* キャプション文 */
+#caption {
+  grid-area: c;
+  margin-bottom: 10%;
+  font-size: small;
+  color: #616161;
+  background-color: #fafafa;
+  overflow-wrap: break-word;
+    /* 角丸設定 */
+    border-radius: 5px;
+}

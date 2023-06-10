@@ -1,0 +1,365 @@
+@charset "UTF-8";
+/*==================================================
+  platformのcss
+===================================*/
+
+
+ /* =====platformデザイン＝＝＝＝＝ */
+
+/* Twitter */
+.twitter {
+    max-width: 100px;
+    margin-right: 10%;
+    color: #fff;
+    border: 2px solid #eff5ffc4;
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, left top, right top, from(#70c7fa), to(#40fef4));
+    background-image: -webkit-linear-gradient(left, #278cff 0%, #40fef4 100%);
+    background-image: linear-gradient(to right, #278cff 0%, #40fef4 100%);
+  
+  }
+  .twitter span{
+    margin: 10%;
+  }
+  
+  /* w-post */
+  .w-post {
+    max-width: 100px;
+    margin-right: 10%;
+    color: #fff;
+    border: 2px solid #eff5ffc4;
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, left top, right top, from(#0edb74), to(#4ee4ff));
+    background-image: -webkit-linear-gradient(left, #0edb74 0%, #4ee4ff 100%);
+    background-image: linear-gradient(to right, #0edb74 0%, #4ee4ff 100%);
+  
+  }
+  .w-post span{
+    margin: 10%;
+  }
+  
+  /* w-live */
+  .w-live {
+    max-width: 100px;
+    margin-right: 10%;
+    color: #fff;
+    border: 2px solid #ffeff6c4;
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, left top, right top, from(#0edb74), to(#ffd64e));
+    background-image: -webkit-linear-gradient(left, #0edb74 0%, #ffd64e 100%);
+    background-image: linear-gradient(to right, #0edb74 0%, #ffd64e 100%);
+  
+  }
+  .w-live span{
+    margin: 10%;
+  }
+  
+  /* youtube */
+  .youtube {
+    max-width: 100px;
+    margin-right: 10%;
+    color: #fff;
+    border: 2px solid #eff5ffc4;
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, left top, right top, from(#f84646), to(#fea540));
+    background-image: -webkit-linear-gradient(left, #f84646 0%, #fea540 100%);
+    background-image: linear-gradient(to right, #f84646 0%, #fea540 100%);
+  
+  }
+  .youtube span{
+    margin: 10%;
+  }
+  
+  /* inst */
+  .inst {
+    max-width: 100px;
+    margin-right: 10%;
+    color: #fff;
+    border: 2px solid #eff5ffc4;
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, left top, right top, from(#cb71ff), to(rgb(254, 251, 64)));
+    background-image: -webkit-linear-gradient(left, #cb71ff 0%, (rgb(254, 251, 64)) 100%);
+    background-image: linear-gradient(to right, #cb71ff 0%, (rgb(254, 251, 64)) 100%);
+  
+  }
+  .inst span{
+    margin: 10%;
+  }
+  
+  /* stage */
+  .stage {
+    max-width: 100px;
+    margin-right: 10%;
+    color: #fff;
+    border: 2px solid #eff5ffc4;
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, left top, right top, from(#24ffc8), to(#ed24ff));
+    background-image: -webkit-linear-gradient(left, #24ffc8 0%, #ed24ff 100%);
+    background-image: linear-gradient(to right, #24ffc8 0%, #ed24ff 100%);
+  
+  }
+  .stage span{
+    margin: 10%;
+  }
+  
+  /* tv */
+  .tv {
+    max-width: 100px;
+    margin-right: 10%;
+    color: #fff;
+    border: 2px solid #eff5ffc4;
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, left top, right top, from(#ffcb5b), to(#49ffff));
+    background-image: -webkit-linear-gradient(left, #ffcb5b 0%, #49ffff 100%);
+    background-image: linear-gradient(to right, #ffcb5b 0%, #49ffff 100%);
+  
+  }
+  .tv span{
+    margin: 10%;
+  }
+  
+  /* other */
+  .other {
+    max-width: 100px;
+    margin-right: 10%;
+    color: #fff;
+    border: 2px solid #eff5ffc4;
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, left top, right top, from(#7a7a7a), to(#3a7471));
+    background-image: -webkit-linear-gradient(left, #7a7a7a 0%, #3a7471 100%);
+    background-image: linear-gradient(to right, #7a7a7a 0%, #3a7471 100%);
+  
+  }
+  .other span{
+    margin: 10%;
+  }
+  /* =====end＝＝＝＝＝ */
+
+  /*==================================================
+ senderのcss
+===================================*/
+
+/* hn */
+.hn {
+    position: relative;
+    background-image: -webkit-gradient(linear, left top, right top, from(#fd98d8), to(#fff99e));
+    background-image: -webkit-linear-gradient(left, #fd98d8 0%, #fff99e 100%);
+    background-image: linear-gradient(to right, #fd98d8 0%, #fff99e 100%);
+    padding: 0px 10px;
+    color: #ffffff;
+    top: -32%;
+    border-radius: 5px;
+    margin: 15px;
+    min-height: 25px;
+    max-width: 70px;
+  }
+  .hn::before {
+    content: "";
+    position: absolute;
+    border: 6px solid transparent;
+    border-right: 6px solid #fd98d8;
+    top: 20%;
+    left: -12px;
+  }
+  
+  .hn span {
+    margin: 10%;
+  }
+  
+  /* dg */
+  .dg {
+    position: relative;
+    background-image: -webkit-gradient(linear, left top, right top, from(#42e1fd), to(#fff99e));
+    background-image: -webkit-linear-gradient(left, #42e1fd 0%, #fff99e 100%);
+    background-image: linear-gradient(to right, #42e1fd 0%, #fff99e 100%);
+    padding: 0px 10px;
+    color: #ffffff;
+    top: -32%;
+    border-radius: 5px;
+    margin: 15px;
+    min-height: 25px;
+    max-width: 70px;
+  }
+  .dg::before {
+    content: "";
+    position: absolute;
+    border: 6px solid transparent;
+    border-right: 6px solid #42e1fd;
+    top: 20%;
+    left: -12px;
+  }
+  
+  .dg span {
+    margin: 10%;
+  }
+  
+  /* hndg */
+  .hndg {
+    position: relative;
+    background-image: -webkit-gradient(linear, left top, right top, from(#fd98d8), to(#42e1fd));
+    background-image: -webkit-linear-gradient(left, #fd98d8 20%, #42e1fd 100%);
+    background-image: linear-gradient(to right, #fd98d8 20%, #42e1fd 100%);
+    padding: 0px 10px;
+    color: #ffffff;
+    top: -32%;
+    border-radius: 5px;
+    margin: 15px;
+    min-height: 25px;
+    max-width: 100px;
+  }
+  .hndg::before {
+    content: "";
+    position: absolute;
+    border: 6px solid transparent;
+    border-right: 6px solid #fd98d8;
+    top: 20%;
+    left: -12px;
+  }
+  
+  .handg span {
+    margin: 10%;
+  }
+  
+  /* tr */
+  .tr {
+    position: relative;
+    background-image: -webkit-gradient(linear, left top, right top, from(#2759ff), to(#7f50ff));
+    background-image: -webkit-linear-gradient(left, #2759ff 0%, #7f50ff 100%);
+    background-image: linear-gradient(to right, #2759ff 0%, #7f50ff 100%);
+    padding: 0px 10px;
+    color: #ffffff;
+    top: -32%;
+    border-radius: 5px;
+    margin: 15px;
+    min-height: 25px;
+    max-width: 120px;
+  }
+  .tr::before {
+    content: "";
+    position: absolute;
+    border: 6px solid transparent;
+    border-right: 6px solid #2759ff;
+    top: 20%;
+    left: -12px;
+  }
+  .tr span {
+    margin: 10%;
+  }
+  
+  /* teume */
+  .teume {
+    position: relative;
+    background-image: -webkit-gradient(linear, left top, right top, from(#ffa927), to(#50ebff));
+    background-image: -webkit-linear-gradient(left, #ffa927 0%, #50ebff 100%);
+    background-image: linear-gradient(to right, #ffa927 0%, #50ebff 100%);
+    padding: 0px 10px;
+    color: #ffffff;
+    top: -32%;
+    border-radius: 5px;
+    margin: 15px;
+    min-height: 25px;
+    max-width: 90px;
+  }
+  .teume::before {
+    content: "";
+    position: absolute;
+    border: 6px solid transparent;
+    border-right: 6px solid #ffa927;
+    top: 20%;
+    left: -12px;
+  }
+  .teume span {
+    margin: 10%;
+  }
+  
+  /* =====end＝＝＝＝＝ */
+
+  /*==================================================
+ tagのcss
+===================================*/
+
+/* ツン */
+.bitter {
+    color: #2941ca;
+  }
+  /* デレ */
+  .sweet {
+    color: #ff44c1;
+  }
+  /* 青春 */
+  .youth {
+    color: #44c4ff;
+  }
+  /* 匂わせ */
+  .mill {
+    color: #c131d4;
+  }
+  /* 面白 */
+  .gag {
+    color: #ff9e44;
+  }
+  /* 小競り合い */
+  .quarrel {
+    color: #ff4444;
+  }
+  /* ふたりだけの世界 */
+  .robinson {
+    color: #b964ff;
+  }
+  /* ツーショ */
+  .tShot {
+    color: #a38fff;
+  }
+  /* セルカ */
+  .selca {
+    color: #ff6bdf;
+  }
+  /* 他撮り */
+  .aSelca {
+    color: #11af60;
+  }
+  /* 複数 */
+  .team {
+    color: #6644ff;
+  }
+  /* イベント */
+  .event {
+    color: #f59312;
+  }
+  /* ピアノ */
+  .piano {
+    color: #842088;
+  }
+  /* 食べ物 */
+  .foods {
+    color: #f8ab1d;
+  }
+  /* 筋肉 */
+  .muscle {
+    color: #cfa226;
+  }
+  /* ダンス */
+  .dance {
+    color: #903efa;
+  }
+  /* バスケ */
+  .bb {
+    color: #f3a81c;
+  }
+  /* 卓球 */
+  .tt {
+    color: #f04526;
+  }
+  /* ファンメイド */
+  .fm {
+    color: #ff44c1;
+  }
+  /* 情報不足 */
+  .tbd {
+    color: #8d8d8d;
+  }
+  
+  
+  
+  /* =====end＝＝＝＝＝ */
+  
