@@ -7,7 +7,7 @@ $(window).on('load',function(){
         $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
         
         var imgfile = '../../resources/img/';
-        var htmlfile = '../html/';
+        var htmlfile = '../../html/';
 
 
         var sliderList = document.getElementById("slider");
