@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 body {
-    padding: 0% 10%;
     margin: 0 auto;
     background: linear-gradient(50deg, #fd98d8 20%, #42e1fd 100%);/*画面遷移のため遷移アニメーションと同じ色を指定*/
 }
