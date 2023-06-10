@@ -1,0 +1,131 @@
+<!-- htmlであることを宣言 -->
+<!DOCTYPE html>
+<!-- このサイトは日本語のサイトです -->
+<html lang="ja">
+    <head>
+         <!-- サイト設定 -->
+        <meta charset="UTF-8"><!-- 文字コードの設定 -->
+				<!-- ビューポートの設定 -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+				<!-- IE対策 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+				<!-- 検索エンジンに乗らないようにする -->
+        <meta name="robots" content="noindex">
+        <!-- end サイト設定 -->
+
+        <!-- icon -->
+        <!--今回は無くていいか～-->
+        <!-- end icon -->
+        <!-- opg -->
+        <!-- 今回は無し！ -->
+        <!-- end opg -->
+        <!-- twitter card -->
+        <!-- 今回は無し！ -->
+        <!-- end twitter card-->
+
+        <title>collect🐮🐰 TOP</title>
+
+        <!-- stylesheet -->
+        <!-- googlefonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jua&family=M+PLUS+Rounded+1c:wght@400&family=Noto+Color+Emoji&family=Nunito:wght@500&display=swap" rel="stylesheet">		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
+        <!-- naverfonts -->
+        <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="resources/css/hndg-top.css">
+
+        <!-- end stylesheet -->
+
+    </head>
+    <body>
+        <div id="splash">
+            <div id="splash-logo">🐮Now Loading...🐰</div>
+        </div>
+        <div class="splashbg1"></div>
+        <div class="splashbg2"></div>
+        <!---画面遷移用-->
+        <div id="container">
+            <!-- ここにヘッダーを読み込む -->
+            <header id="header"></header>
+
+            <!-- ここからメイン -->
+            <div class="wrapper">
+                <div class="terms-container">
+                    <ul class="sort">
+                        <span class="sort-title">sort</span>
+                            <li id="new" class="new" onclick="newClick()">new</li>
+                            <li id="old" class="old o_off" onclick="oldClick()">old</li>
+                    </ul>
+                    <ul class="filter">
+                        <span class="filter-title">filter</span>
+                        <li><dl><dt>Platform</dt><dd><ul>
+                            <!-- platform -->
+                            <li id="tw-f" class="twitter"  onclick="twClick()">Twitter</li>
+                            <li id="wp-f" class="wPost" onclick="wpClick()">W-post</li>
+                            <li id="wl-f" class="wLive" onclick="wlClick()">W-live</li>
+                            <li id="yt-f" class="youtube" onclick="ytClick()">YouTube</li>
+                            <li id="ig-f" class="instagram" onclick="igClick()">Instagram</li>
+                            <li id="st-f" class="stage" onclick="stClick()">Stage</li>
+                            <li id="tv-f" class="tv" onclick="tvClick()">TV</li>
+                            <li id="ot-f" class="other" onclick="otClick()">Other</li>
+                        </ul></dd></dl></li>
+                        <li><dl><dt>Sender</dt><dd><ul>
+                            <!-- sender -->
+                            <li id="hndg-f" class="hndg" onclick="hndgClick()">hndg</li>
+                            <li id="hn-f" class="hn" onclick="hnClick()">hn</li>
+                            <li id="dg-f" class="dg" onclick="dgClick()">dg</li>
+                            <li id="tr-f" class="tr" onclick="trClick()">treasure</li>
+                            <li id="teume-f" class="teume" onclick="teumeClick()">teume</li>
+                        </ul></dd></dl></li>
+                        <li><dl><dt>Tag</dt><dd><ul>
+                            <li id="bitter-f" class="bitter" onclick="bitterClick()">ツン</li>
+                            <li id="sweet-f" class="sweet" onclick="sweetClick()">デレ</li>
+                            <li id="youth-f" class="youth" onclick="youthClick()">青春</li>
+                            <li id="mill-f" class="mill" onclick="millClick()">匂わせ</li>
+                            <li id="gag-f" class="gag" onclick="gagClick()">面白</li>
+                            <li id="quarrel-f" class="quarrel" onclick="quarrelClick()">小競り合い</li>
+                            <li id="robinson-f" class="robinson" onclick="robinsonClick()">ふたりだけの世界</li>
+                            <li id="tShot-f" class="tShot" onclick="tShotClick()">ツーショ</li>
+                            <li id="selca-f" class="selca" onclick="selcaClick()">セルカ</li>
+                            <li id="aSelca-f" class="aSelca" onclick="aSelcaClick()">他撮り</li>
+                            <li id="team-f" class="team" onclick="teamClick()">複数</li>
+                            <li id="event-f" class="event" onclick="eventClick()">イベント</li>
+                            <li id="piano-f" class="piano" onclick="pianoClick()">ピアノ</li>
+                            <li id="foods-f" class="foods" onclick="foodsClick()">食べ物</li>
+                            <li id="muscle-f" class="muscle" onclick="muscleClick()">筋肉</li>
+                            <li id="dance-f" class="dance" onclick="danceClick()">ダンス</li>
+                            <li id="bb-f" class="bb" onclick="bbClick()">バスケ</li>
+                            <li id="tt-f" class="tt" onclick="ttClick()">卓球</li>
+                            <li id="fm-f" class="fm" onclick="fmClick()">ファンメイド</li>
+                            <li id="tbd-f" class="tbd" onclick="tbdClick()">情報不足</li>
+                        </ul></dd></dl></li>
+                    </ul>
+                </div>
+
+                <div class="post-container">
+                    <ul id="galleryList" class="gallery">
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <!-- js -->
+	    <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <!-- muuriのjs -->
+        <script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+        <script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+        <!-- htmlとリンクしたjs -->
+        <script src="resources/js/hndg-data.js"  type="text/javascript" charset="utf-8"></script> 
+        <script src="resources/js/hndg-top.js"  type="text/javascript" charset="utf-8"></script>
+        <script>
+          //　ヘッダー読み込み
+          $(function () {
+              // id=headerにheader.html読み込み
+              $("#header").load("../header.html");
+          });
+        </script> 
+    </body>
+</html>
