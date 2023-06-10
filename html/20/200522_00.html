@@ -1,0 +1,124 @@
+<!-- htmlであることを宣言 -->
+<!DOCTYPE html>
+<!-- このサイトは日本語のサイトです -->
+<html lang="ja">
+    <head>
+         <!-- サイト設定 -->
+        <meta charset="UTF-8"><!-- 文字コードの設定 -->
+				<!-- ビューポートの設定 -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+				<!-- IE対策 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+				<!-- 検索エンジンに乗らないようにする -->
+        <meta name="robots" content="noindex">
+        <!-- end サイト設定 -->
+
+        <!-- icon -->
+        <!--今回は無くていいか～-->
+        <!-- end icon -->
+        <!-- opg -->
+        <!-- 今回は無し！ -->
+        <!-- end opg -->
+        <!-- twitter card -->
+        <!-- 今回は無し！ -->
+        <!-- end twitter card-->
+
+        <title>2020/05/12</title>
+
+        <!-- stylesheet -->
+        <!-- googlefonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jua&family=M+PLUS+Rounded+1c:wght@400&family=Noto+Color+Emoji&family=Nunito:wght@500&display=swap" rel="stylesheet">		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
+        <!-- naverfonts -->
+        <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
+        <!-- slickのCSS -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="../../resources/css/base.css">
+        <!-- end stylesheet -->
+
+    </head>
+    <body>
+      <div id="splash">
+        <div id="splash-logo">🐮Now Loading...🐰</div>
+        <!--/splash--></div>
+        <div class="splashbg1"></div>
+        <div class="splashbg2"></div>
+    <!---画面遷移用-->
+    <div id="container">
+        <!-- ここにヘッダーを読み込む -->
+        <header id="header"></header>
+
+
+        <!-- ここからメイン -->
+        <div class="warpper">
+          <div class="contener">
+              <div class="display">
+                  <ul id="img-list" class="slider">
+ 
+                  </ul>
+              </div>
+              <div class="container-caption-warpper">
+              <div class="container-caption">
+                  <div id="date">
+
+                  </div>
+                  <div class="iin-area">
+                    <div class="iin">
+                      <img id="iinIMG" onclick="iinOn()" src="../../resources/img/common/heart_00.png">
+                      <script>
+                        var pics_src = new Array("../../resources/img/common/heart_00.png","../../resources/img/common/heart_01.png");
+                        var num = 0;
+             
+                        function iinOn() {
+                            if (num == 1) {
+                                num = 1;
+                            }
+                            else {
+                                num ++;
+                            }
+                            document.getElementById("iinIMG").src=pics_src[num];
+                        }
+                        </script>
+                    </div>
+                  </div>
+                  <div id="platform">
+
+                  </div>
+                  <div id="sender">
+
+                  </div>
+                  <div id="tag">
+
+                  </div>
+                  <div id="caption">
+
+                  </div>
+              </div>
+          </div>
+          </div>
+      </div>
+  </div>
+    <!-- js -->
+			<!-- jQuery -->
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+            <!-- slickのjs -->
+            <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+            <!-- Modaalのjs -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+            <!-- 生成用のJS読み込み -->
+            <script src="../../resources/js/hndg-data.js"  type="text/javascript" charset="utf-8"></script> 
+            <script src="../../resources/js/base-generate.js"  type="text/javascript" charset="utf-8"></script> 
+            <link rel="stylesheet" type="text/css" href="../../resources/css/base-generate.css">
+            <script src="../../resources/js/base.js"  type="text/javascript" charset="utf-8"></script>
+            <link rel="stylesheet" type="text/css" href="../../resources/css/filter.css">
+            <script>
+                //　ヘッダー読み込み
+                $(function () {
+                    // id=headerにheader.html読み込み
+                    $("#header").load("../../header.html");
+                });
+            </script> 
+</body>
+</html>
