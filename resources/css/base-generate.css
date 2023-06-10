@@ -1,0 +1,95 @@
+/*==================================================
+ スライドショーのcss
+===================================*/
+ .slider {
+     /* width: 30%; */
+     height: 30%;
+     /* 画像を親要素から10%縮小したエリアに表示 */
+     padding: 10%;
+     /* position:relative; */
+     /* z-index: 1; */
+     /*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+     /* height: 100vh;スライダー全体の縦幅を画面の高さいっぱい（100vh）にする */
+}
+
+
+ /*矢印の設定*/
+ 
+ /*戻る、次へ矢印の位置*/
+ .slick-prev, 
+ .slick-next {
+     position: absolute;/*絶対配置にする*/
+     z-index: 3;
+     top: 42%;
+     cursor: pointer;/*マウスカーソルを指マークに*/
+     outline: none;/*クリックをしたら出てくる枠線を消す*/
+     border-top: 2px solid #42e1fd;/*矢印の色*/
+     border-right: 2px solid #fd98d8;/*矢印の色*/
+     height: 25px;
+     width: 25px;
+ }
+ 
+ .slick-prev {/*戻る矢印の位置と形状*/
+     left:2.5%;
+     transform: rotate(-135deg);
+ }
+ 
+ .slick-next {/*次へ矢印の位置と形状*/
+     right:2.5%;
+     transform: rotate(45deg);
+ }
+ 
+/* ドットナビゲーションの設定 */
+ 
+ .slick-dots {
+    position: relative;
+    right: 5%;
+     z-index: 3;
+     text-align:center;
+     margin:0px 0 0 0;
+ }
+ 
+ .slick-dots li {
+     display:inline-block;
+     margin:0 5px;
+ }
+ 
+ .slick-dots button {
+    color: transparent;
+    outline: none;
+    border: none;
+    width:3px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:rgba(204, 204, 204, 0.725);/*ドットボタンの色*/
+ }
+ 
+ .slick-dots .slick-active button{
+     background: linear-gradient(50deg, #fd98d8 20%, #42e1fd 150%);/*ドットボタンの現在地表示の色*/
+ }
+
+ /* スライドショーのモーダル */
+
+ /*hideエリアをはじめは非表示*/
+.hide-area{
+	display: none;
+}
+
+/*モーダルのボタンの色を変更したい場合*/
+.modaal-close:after, 
+.modaal-close:before{
+	background:#ccc;	
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before{
+	background:#666;
+}
+
+/*動画表示のモーダル：余白を変更したい場合*/
+.modaal-video .modaal-inner-wrapper{
+	padding:0;
+}

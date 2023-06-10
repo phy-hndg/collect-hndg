@@ -1,0 +1,192 @@
+@charset "UTF-8";
+
+body {
+    padding: 0% 10%;
+    margin: 0 auto;
+    background: linear-gradient(50deg, #fd98d8 20%, #42e1fd 100%);/*画面遷移のため遷移アニメーションと同じ色を指定*/
+}
+body.appear{
+    background:#fff;/*画面を開いた後の背景色を指定*/
+  }
+  
+/*========= ローディング画面のためのCSS ===============*/
+#splash {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(50deg, #fd98d8 20%, #42e1fd 100%);
+	z-index: 9999999;
+	text-align:center;
+	color:#fff;
+}
+
+#splash-logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/*画面遷移アニメーション*/
+.splashbg1,
+.splashbg2{
+    display: none;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg1,
+body.appear .splashbg2{
+	display:block;
+}
+/*右に消えるエリア*/
+body.appear .splashbg1{
+	animation-name:PageAnime;
+	animation-duration:1.2s;
+	animation-timing-function:ease-in-out;
+	animation-fill-mode:forwards;
+    content: "";
+    position:fixed;
+	z-index: 999;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+	left:50%;
+    transform: scaleX(1);
+    background-color:  linear-gradient(50deg, #fd98d8 20%, #42e1fd 100%);/*伸びる背景色の設定*/
+}
+
+@keyframes PageAnime{
+	0% {
+		transform-origin:left;
+		transform:scaleX(1);
+	}
+	50% {
+		transform-origin:right;
+	}
+	100% {
+		transform-origin:right;
+		transform:scaleX(0);
+	}
+}
+
+/*左に消えるエリア*/
+body.appear .splashbg2{
+	animation-name:PageAnime2;
+	animation-duration:1.2s;
+	animation-timing-function:ease-in-out;
+	animation-fill-mode:forwards;
+    content: "";
+    position:fixed;
+	z-index: 999;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+	right:50%;
+    transform: scaleX(1);
+    background-color: linear-gradient(50deg, #fd98d8 20%, #42e1fd 100%);/*伸びる背景色の設定*/
+}
+
+@keyframes PageAnime2{
+	0% {
+		transform-origin:right;
+		transform:scaleX(1);
+	}
+
+	50% {
+		transform-origin:left;
+	}
+	100% {
+		transform-origin:left;
+		transform:scaleX(0);
+	}
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#container{
+	opacity: 0;/*はじめは透過0に*/
+    text-align:center;
+    width: 100%;
+    height: 100%;
+}
+/*bodyにappearクラスがついたら出現*/
+body.appear #container{
+	animation-name:PageAnimeAppear;
+	animation-duration:1s;
+	animation-delay:0.2s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
+}
+
+
+/* =====以下からメインコンテンツ===== */
+
+/* img要素を親要素の中に収めるために最大の幅を高さを自動で合わせる設定 */
+img {
+   max-width: 100%;
+   height: auto;
+   border-radius: 10px;/*角の丸み*/
+ }
+
+h1 {
+    display: inline-block;
+    background: linear-gradient(50deg, #fd98d8 20%, #42e1fd 100%);
+    background: -webkit-linear-gradient(50deg, #fd98d8 20%, #42e1fd 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    color: #fff;
+    text-align: left;
+}
+
+h3 {
+    color: #fff;
+    text-align: left;
+}
+
+.textarea {
+    margin: 0% 20%;
+    padding: 20px;
+    width: auto;
+    height: auto;
+    background: linear-gradient(-80deg, #fd98d8 20%, #42e1fd 100%);
+    background: -webkit-linear-gradient(-80deg, #fd98d8 20%, #42e1fd 100%);
+    border-radius: 10px;/*角の丸み*/
+}
+
+p {
+    color: #fff;
+    text-align: left;
+    line-height: 2em;
+}
+
+@media screen and (max-width:600px) {
+    .textarea {
+		margin: 0% 0%;
+    }
+}
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider img {
+    width:100%;/*スライダー内の画像を横幅100%に*/
+    height:auto;
+}
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+.slider .slick-slide {
+    margin: 100px 10px;/*スライド左右の余白調整*/
+}
