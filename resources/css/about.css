@@ -132,7 +132,6 @@ body.appear #container{
 img {
    max-width: 100%;
    height: auto;
-   border-radius: 10px;/*角の丸み*/
  }
 
 h1 {
@@ -187,5 +186,5 @@ p {
 /*slickのJSで書かれるタグ内、スライド左右の余白調整*/
 
 .slider .slick-slide {
-    margin: 100px 10px;/*スライド左右の余白調整*/
+    margin: 100px 0px;/*スライド左右の余白調整*/
 }

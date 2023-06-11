@@ -28,4 +28,38 @@
             </div>
         </div>
     </div>
+    <div class="header-containerSP">
+        <div class="openbtn"><span></span><span></span><span></span></div>
+        <nav id="g-nav" class="">
+            <div id="g-nav-list">
+                <ul>
+                <li>
+                    <a class="top header-a" rel="start" href="../common/hndg-top.html">top</a>
+                </li>	
+                <li>
+                    <a class="about header-a" href="../common/about.html">about</a>
+                </li>	
+                <li>
+                    <a class="t-dayfndg header-a" href="">今日の환영즈</a>
+                </li>	
+                <li>
+                    <a class="hndg-timeline header-a" href="../common/hndg-timeline.html">timeline</a>
+                </li>
+                <li>
+                    <a class="hndg-calendar header-a" href="../common/hndg-calendar.html">환영カレンダー</a>
+                </li>
+                <li>
+                    <a class="form header-a" href="https://forms.gle/rzVGVt2B7xUF6ANbA" target=”_blank”>form</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <script>
+        $(".openbtn").click(function () {
+            $(this).toggleClass('active');
+            let element = document.getElementById('g-nav');
+            $(element).toggleClass('panelactive');
+        });
+    </script>
 </header>
