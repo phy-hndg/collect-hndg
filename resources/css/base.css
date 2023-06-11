@@ -1,10 +1,13 @@
 @charset "UTF-8";
 
+html {
+  width: 100%;
+}
+
 body {
-      width: 100%;
-      max-width: 900px;
       margin: 0 auto;
       background: linear-gradient(50deg, #fd98d8 20%, #42e1fd 100%);/*画面遷移のため遷移アニメーションと同じ色を指定*/
+      padding: 0% 10%;
 }
 
 body.appear{
@@ -143,7 +146,7 @@ body.appear #container{
 /* 親要素 */
 .warpper {
   /* ヘッダーとの空白確保 */
-  padding: 10%;
+  padding: 10% 0%;
 }
 
 /* コンテナ要素定義 */
@@ -182,7 +185,7 @@ body.appear #container{
   height: 100%;
   /* グリッドの設定 */
   display: grid;
-  grid-template-columns: 1.5fr 1.5fr 1fr minmax(25px , 25%);
+  grid-template-columns: 1.5fr 1.5fr 1fr minmax(25px , 20%);
   grid-template-rows: minmax(10px , 10%) minmax(10px , 10%) auto auto;
   /* gap: 10px; */
   grid-template-areas: 
@@ -200,23 +203,12 @@ body.appear #container{
 }
 
 .date-text {
-  font-size:min(2vw,30px);
+  font-size:min(4vw,30px);
+  margin-bottom: 10%;
   color: #616161;
   white-space: nowrap;
 }
 /* ⇐日付ここまで */
-
-/* urlここから⇒ */
-/* .url {
-    grid-area: l;
-    margin-left: 5%;
-} */
-
-/* .url a {
-  font-size: x-small;
-  margin-top: 10%;
-} */
-/* ⇐urlここまで */
 
 /* いいねここから⇒ */
 .iin-area {
@@ -244,15 +236,17 @@ body.appear #container{
 
 /* platformエリア */
 #platform {
+  width: 100%;
   grid-area: p;
-  font-size: 100%;
+  font-size:min(2vw,22px);
   font-weight: bold;
 }
 
 /* senderエリア */
 #sender {
+  width: 100%;
   grid-area: s;
-  font-size: 100%;
+  font-size:min(3vw,22px);
   font-weight: bold;
 }
 
@@ -270,10 +264,54 @@ body.appear #container{
 #caption {
   grid-area: c;
   margin-bottom: 10%;
-  font-size: small;
+  font-size: 15px;
   color: #616161;
   background-color: #fafafa;
   overflow-wrap: break-word;
     /* 角丸設定 */
     border-radius: 5px;
+    padding: 2%;
+    line-height: 1.5em;
+}
+
+@media screen and (max-width:600px) {
+  .container-caption {
+    grid-template-columns: 1.5fr 1.5fr 1fr minmax(25px , 20%);
+    grid-template-rows: minmax(10px , 10%) minmax(10px , 10%) minmax(10px , 10%) auto auto;
+    /* gap: 10px; */
+    grid-template-areas: 
+    "d d d i"
+    "p p p i"
+    "s s s s"
+    "t t t t"
+    "c c c c";
+    /* padding: 0% 10%; */
+  }
+  /* platformエリア */
+  #platform {
+  width: 60%;
+  }
+
+  /* senderエリア */
+  #sender {
+    width: 80%;
+  }
+  /* タグエリア */
+  #tag {
+    padding-top: 10%;
+  }
+  /* キャプション文 */
+  #caption {
+    font-size: small;
+    padding: 10%;
+  }
+  .contener {
+    width: 90%;
+  }
+}
+@media screen and  (max-width: 1300px) and (min-width: 768px) {
+  .container-caption {
+    grid-template-columns: 1.5fr 1.5fr 1fr minmax(25px , 20%);
+    grid-template-rows: minmax(15px , 15%) minmax(10px , 10%) minmax(10px , 10%) auto auto;
+  }
 }
