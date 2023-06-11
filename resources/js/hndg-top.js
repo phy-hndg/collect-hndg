@@ -73,6 +73,40 @@ $('.splashbg1').on('animationend', function() {
 
 });
 
+function sp_pltClick() {
+    sp_plt = document.getElementById('sp_plt');
+    if(sp_plt.classList.contains('active') == false) {
+        sp_plt.style.display ="none";
+        document.querySelector('#sp_plt').classList.toggle('active');
+    }else{
+        sp_plt.style.display ="block";
+        document.querySelector('#sp_plt').classList.toggle('active');
+    }
+            
+}
+function sp_sndClick() {
+    sp_snd = document.getElementById('sp_snd');
+    if(sp_snd.classList.contains('active') == false) {
+        sp_snd.style.display ="none";
+        document.querySelector('#sp_snd').classList.toggle('active');
+    }else{
+        sp_snd.style.display ="block";
+        document.querySelector('#sp_snd').classList.toggle('active');
+    }
+            
+}
+function sp_tagClick() {
+    sp_tag = document.getElementById('sp_tag');
+    if(sp_tag.classList.contains('active') == false) {
+        sp_tag.style.display ="none";
+        document.querySelector('#sp_tag').classList.toggle('active');
+    }else{
+        sp_tag.style.display ="block";
+        document.querySelector('#sp_tag').classList.toggle('active');
+    }
+            
+}
+
 // sort
 var newclass = document.getElementById('new');
 var oldclass = document.getElementById('old');
@@ -232,12 +266,15 @@ function twClick() {
     if( twclass.classList.contains('tw_off') == true ){
        
         document.querySelector('#tw-f').classList.toggle('tw_off');
+        document.querySelector('#sp_tw-f').classList.toggle('tw_off');
     }else{
         for(var i = 0,id =""; i < tw_idlist.length; i++) {
             id = document.getElementById(tw_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#tw-f').classList.toggle('tw_off');
+        document.querySelector('#sp_tw-f').classList.toggle('tw_off');
+
     }
 }
 // wp
@@ -248,12 +285,14 @@ function wpClick() {
             id.style.display ="block";
         }
         document.querySelector('#wp-f').classList.toggle('wp_off');
+        document.querySelector('#sp_wp-f').classList.toggle('wp_off');
     }else{
         for(var i = 0,id =""; i < wp_idlist.length; i++) {
             id = document.getElementById(wp_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#wp-f').classList.toggle('wp_off');
+        document.querySelector('#sp_wp-f').classList.toggle('wp_off');
     }
 }
 // wl
@@ -264,12 +303,14 @@ function wlClick() {
             id.style.display ="block";
         }
         document.querySelector('#wl-f').classList.toggle('wl_off');
+        document.querySelector('#sp_wl-f').classList.toggle('wl_off');
     }else{
         for(var i = 0,id =""; i < wl_idlist.length; i++) {
             id = document.getElementById(wl_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#wl-f').classList.toggle('wl_off');
+        document.querySelector('#sp_wl-f').classList.toggle('wl_off');
     }
 }
 // youtube
@@ -280,12 +321,14 @@ function ytClick() {
             id.style.display ="block";
         }
         document.querySelector('#yt-f').classList.toggle('yt_off');
+        document.querySelector('#sp_yt-f').classList.toggle('yt_off');
     }else{
         for(var i = 0,id =""; i < yt_idlist.length; i++) {
             id = document.getElementById(yt_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#yt-f').classList.toggle('yt_off');
+        document.querySelector('#sp_yt-f').classList.toggle('yt_off');
     }
 }
 // Instagram
@@ -296,12 +339,14 @@ function igClick() {
             id.style.display ="block";
         }
         document.querySelector('#ig-f').classList.toggle('ig_off');
+        document.querySelector('#sp_ig-f').classList.toggle('ig_off');
     }else{
         for(var i = 0,id =""; i < ig_idlist.length; i++) {
             id = document.getElementById(ig_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#ig-f').classList.toggle('ig_off');
+        document.querySelector('#sp_ig-f').classList.toggle('ig_off');
     }
 }
 // stage
@@ -312,12 +357,14 @@ function stClick() {
             id.style.display ="block";
         }
         document.querySelector('#st-f').classList.toggle('st_off');
+        document.querySelector('#sp_st-f').classList.toggle('st_off');
     }else{
         for(var i = 0,id =""; i < st_idlist.length; i++) {
             id = document.getElementById(st_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#st-f').classList.toggle('st_off');
+        document.querySelector('#sp_st-f').classList.toggle('st_off');
     }
 }
 // tv
@@ -328,12 +375,14 @@ function tvClick() {
             id.style.display ="block";
         }
         document.querySelector('#tv-f').classList.toggle('tv_off');
+        document.querySelector('#sp_tv-f').classList.toggle('tv_off');
     }else{
         for(var i = 0,id =""; i < tv_idlist.length; i++) {
             id = document.getElementById(tv_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#tv-f').classList.toggle('tv_off');
+        document.querySelector('#sp_tv-f').classList.toggle('tv_off');
     }
 }
 // ot
@@ -344,12 +393,14 @@ function otClick() {
             id.style.display ="block";
         }
         document.querySelector('#ot-f').classList.toggle('ot_off');
+        document.querySelector('#sp_ot-f').classList.toggle('ot_off');
     }else{
         for(var i = 0,id =""; i < ot_idlist.length; i++) {
             id = document.getElementById(ot_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#ot-f').classList.toggle('ot_off');
+        document.querySelector('#sp_ot-f').classList.toggle('ot_off');
     }
 }
 // filter hndg-f の切り替え
@@ -360,12 +411,14 @@ function hndgClick() {
             id.style.display ="block";
         }
         document.querySelector('#hndg-f').classList.toggle('hndg_off');
+        document.querySelector('#sp_hndg-f').classList.toggle('hndg_off');
     }else{
         for(var i = 0,id =""; i < hndg_idlist.length; i++) {
             id = document.getElementById(hndg_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#hndg-f').classList.toggle('hndg_off');
+        document.querySelector('#sp_hndg-f').classList.toggle('hndg_off');
     }
 }
 // filter hn-f の切り替え
@@ -376,12 +429,14 @@ function hnClick() {
             id.style.display ="block";
         }
         document.querySelector('#hn-f').classList.toggle('hn_off');
+        document.querySelector('#sp_hn-f').classList.toggle('hn_off');
     }else{
         for(var i = 0,id =""; i < hn_idlist.length; i++) {
             id = document.getElementById(hn_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#hn-f').classList.toggle('hn_off');
+        document.querySelector('#sp_hn-f').classList.toggle('hn_off');
     }
 }
 // filter dg-f の切り替え
@@ -392,12 +447,14 @@ function dgClick() {
             id.style.display ="block";
         }
         document.querySelector('#dg-f').classList.toggle('dg_off');
+        document.querySelector('#sp_dg-f').classList.toggle('dg_off');
     }else{
         for(var i = 0,id =""; i < dg_idlist.length; i++) {
             id = document.getElementById(dg_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#dg-f').classList.toggle('dg_off');
+        document.querySelector('#sp_dg-f').classList.toggle('dg_off');
     }
 }
 // filter tr の切り替え
@@ -408,12 +465,14 @@ function trClick() {
             id.style.display ="block";
         }
         document.querySelector('#tr-f').classList.toggle('tr_off');
+        document.querySelector('#sp_tr-f').classList.toggle('tr_off');
     }else{
         for(var i = 0,id =""; i < tr_idlist.length; i++) {
             id = document.getElementById(tr_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#tr-f').classList.toggle('tr_off');
+        document.querySelector('#sp_tr-f').classList.toggle('tr_off');
     }
 }
 // filter teume-f の切り替え
@@ -424,12 +483,14 @@ function teumeClick() {
             id.style.display ="block";
         }
         document.querySelector('#teume-f').classList.toggle('teume_off');
+        document.querySelector('#sp_teume-f').classList.toggle('teume_off');
     }else{
         for(var i = 0,id =""; i < teume_idlist.length; i++) {
             id = document.getElementById(teume_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#teume-f').classList.toggle('teume_off');
+        document.querySelector('#sp_teume-f').classList.toggle('teume_off');
     }
 }
 // tag
@@ -458,12 +519,14 @@ function bitterClick() {
             id.style.display ="block";
         }
         document.querySelector('#bitter-f').classList.toggle('bitter_off');
+        document.querySelector('#sp_bitter-f').classList.toggle('bitter_off');
     }else{
         for(var i = 0,id =""; i < bitter_idlist.length; i++) {
             id = document.getElementById(bitter_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#bitter-f').classList.toggle('bitter_off');
+        document.querySelector('#sp_bitter-f').classList.toggle('bitter_off');
     }
 }
 // filter sweet-f の切り替え
@@ -491,12 +554,14 @@ function sweetClick() {
             id.style.display ="block";
         }
         document.querySelector('#sweet-f').classList.toggle('sweet_off');
+        document.querySelector('#sp_sweet-f').classList.toggle('sweet_off');
     }else{
         for(var i = 0,id =""; i < sweet_idlist.length; i++) {
             id = document.getElementById(sweet_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#sweet-f').classList.toggle('sweet_off');
+        document.querySelector('#sp_sweet-f').classList.toggle('sweet_off');
     }
 }
 // filter youth-f の切り替え
@@ -524,12 +589,14 @@ function youthClick() {
             id.style.display ="block";
         }
         document.querySelector('#youth-f').classList.toggle('youth_off');
+        document.querySelector('#sp_youth-f').classList.toggle('youth_off');
     }else{
         for(var i = 0,id =""; i < youth_idlist.length; i++) {
             id = document.getElementById(youth_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#youth-f').classList.toggle('youth_off');
+        document.querySelector('#sp_youth-f').classList.toggle('youth_off');
     }
 }
 // filter mill の切り替え
@@ -557,12 +624,14 @@ function millClick() {
             id.style.display ="block";
         }
         document.querySelector('#mill-f').classList.toggle('mill_off');
+        document.querySelector('#sp_mill-f').classList.toggle('mill_off');
     }else{
         for(var i = 0,id =""; i < mill_idlist.length; i++) {
             id = document.getElementById(mill_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#mill-f').classList.toggle('mill_off');
+        document.querySelector('#sp_mill-f').classList.toggle('mill_off');
     }
 }
 // filter gag-f の切り替え
@@ -590,12 +659,14 @@ function gagClick() {
             id.style.display ="block";
         }
         document.querySelector('#gag-f').classList.toggle('gag_off');
+        document.querySelector('#sp_gag-f').classList.toggle('gag_off');
     }else{
         for(var i = 0,id =""; i < gag_idlist.length; i++) {
             id = document.getElementById(gag_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#gag-f').classList.toggle('gag_off');
+        document.querySelector('#sp_gag-f').classList.toggle('gag_off');
     }
 }
 // filter quarrel-f の切り替え
@@ -623,12 +694,14 @@ function quarrelClick() {
             id.style.display ="block";
         }
         document.querySelector('#quarrel-f').classList.toggle('quarrel_off');
+        document.querySelector('#sp_quarrel-f').classList.toggle('quarrel_off');
     }else{
         for(var i = 0,id =""; i < quarrel_idlist.length; i++) {
             id = document.getElementById(quarrel_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#quarrel-f').classList.toggle('quarrel_off');
+        document.querySelector('#sp_quarrel-f').classList.toggle('quarrel_off');
     }
 }
 // filter robinson-f の切り替え
@@ -656,12 +729,14 @@ function robinsonClick() {
             id.style.display ="block";
         }
         document.querySelector('#robinson-f').classList.toggle('robinson_off');
+        document.querySelector('#sp_robinson-f').classList.toggle('robinson_off');
     }else{
         for(var i = 0,id =""; i < robinson_idlist.length; i++) {
             id = document.getElementById(robinson_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#robinson-f').classList.toggle('robinson_off');
+        document.querySelector('#sp_robinson-f').classList.toggle('robinson_off');
     }
 }
 // filter tShot-f の切り替え
@@ -689,12 +764,14 @@ function tShotClick() {
             id.style.display ="block";
         }
         document.querySelector('#tShot-f').classList.toggle('tShot_off');
+        document.querySelector('#sp_tShot-f').classList.toggle('tShot_off');
     }else{
         for(var i = 0,id =""; i < tShot_idlist.length; i++) {
             id = document.getElementById(tShot_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#tShot-f').classList.toggle('tShot_off');
+        document.querySelector('#sp_tShot-f').classList.toggle('tShot_off');
     }
 }
 // filter selca-f の切り替え
@@ -722,12 +799,14 @@ function selcaClick() {
             id.style.display ="block";
         }
         document.querySelector('#selca-f').classList.toggle('selca_off');
+        document.querySelector('#sp_selca-f').classList.toggle('selca_off');
     }else{
         for(var i = 0,id =""; i < selca_idlist.length; i++) {
             id = document.getElementById(selca_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#selca-f').classList.toggle('selca_off');
+        document.querySelector('#sp_selca-f').classList.toggle('selca_off');
     }
 }
 // filter aSelca-f の切り替え
@@ -755,12 +834,14 @@ function aSelcaClick() {
             id.style.display ="block";
         }
         document.querySelector('#aSelca-f').classList.toggle('aSelca_off');
+        document.querySelector('#sp_aSelca-f').classList.toggle('aSelca_off');
     }else{
         for(var i = 0,id =""; i < aSelca_idlist.length; i++) {
             id = document.getElementById(aSelca_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#aSelca-f').classList.toggle('aSelca_off');
+        document.querySelector('#sp_aSelca-f').classList.toggle('aSelca_off');
     }
 }
 // filter team-f の切り替え
@@ -788,12 +869,14 @@ function teamClick() {
             id.style.display ="block";
         }
         document.querySelector('#team-f').classList.toggle('team_off');
+        document.querySelector('#sp_team-f').classList.toggle('team_off');
     }else{
         for(var i = 0,id =""; i < team_idlist.length; i++) {
             id = document.getElementById(team_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#team-f').classList.toggle('team_off');
+        document.querySelector('#sp_team-f').classList.toggle('team_off');
     }
 }
 // filter event-f の切り替え
@@ -821,12 +904,14 @@ function eventClick() {
             id.style.display ="block";
         }
         document.querySelector('#event-f').classList.toggle('event_off');
+        document.querySelector('#sp_event-f').classList.toggle('event_off');
     }else{
         for(var i = 0,id =""; i < event_idlist.length; i++) {
             id = document.getElementById(event_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#event-f').classList.toggle('event_off');
+        document.querySelector('#sp_event-f').classList.toggle('event_off');
     }
 }
 // filter piano-f の切り替え
@@ -854,12 +939,14 @@ function pianoClick() {
             id.style.display ="block";
         }
         document.querySelector('#piano-f').classList.toggle('piano_off');
+        document.querySelector('#sp_piano-f').classList.toggle('piano_off');
     }else{
         for(var i = 0,id =""; i < piano_idlist.length; i++) {
             id = document.getElementById(piano_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#piano-f').classList.toggle('piano_off');
+        document.querySelector('#sp_piano-f').classList.toggle('piano_off');
     }
 }
 // filter foods-f の切り替え
@@ -887,12 +974,14 @@ function foodsClick() {
             id.style.display ="block";
         }
         document.querySelector('#foods-f').classList.toggle('foods_off');
+        document.querySelector('#sp_foods-f').classList.toggle('foods_off');
     }else{
         for(var i = 0,id =""; i < foods_idlist.length; i++) {
             id = document.getElementById(foods_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#foods-f').classList.toggle('foods_off');
+        document.querySelector('#sp_foods-f').classList.toggle('foods_off');
     }
 }
 // filter muscle の切り替え
@@ -920,12 +1009,14 @@ function muscleClick() {
             id.style.display ="block";
         }
         document.querySelector('#muscle-f').classList.toggle('muscle_off');
+        document.querySelector('#sp_muscle-f').classList.toggle('muscle_off');
     }else{
         for(var i = 0,id =""; i < muscle_idlist.length; i++) {
             id = document.getElementById(muscle_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#muscle-f').classList.toggle('muscle_off');
+        document.querySelector('#sp_muscle-f').classList.toggle('muscle_off');
     }
 }
 // filter dance-f の切り替え
@@ -953,12 +1044,14 @@ function danceClick() {
             id.style.display ="block";
         }
         document.querySelector('#dance-f').classList.toggle('dance_off');
+        document.querySelector('#sp_dance-f').classList.toggle('dance_off');
     }else{
         for(var i = 0,id =""; i < dance_idlist.length; i++) {
             id = document.getElementById(dance_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#dance-f').classList.toggle('dance_off');
+        document.querySelector('#sp_dance-f').classList.toggle('dance_off');
     }
 }
 // filter bb-f の切り替え
@@ -986,12 +1079,14 @@ function bbClick() {
             id.style.display ="block";
         }
         document.querySelector('#bb-f').classList.toggle('bb_off');
+        document.querySelector('#sp_bb-f').classList.toggle('bb_off');
     }else{
         for(var i = 0,id =""; i < bb_idlist.length; i++) {
             id = document.getElementById(bb_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#bb-f').classList.toggle('bb_off');
+        document.querySelector('#sp_bb-f').classList.toggle('bb_off');
     }
 }
 // filter tt-f の切り替え
@@ -1019,12 +1114,14 @@ function ttClick() {
             id.style.display ="block";
         }
         document.querySelector('#tt-f').classList.toggle('tt_off');
+        document.querySelector('#sp_tt-f').classList.toggle('tt_off');
     }else{
         for(var i = 0,id =""; i < tt_idlist.length; i++) {
             id = document.getElementById(tt_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#tt-f').classList.toggle('tt_off');
+        document.querySelector('#sp_tt-f').classList.toggle('tt_off');
     }
 }
 // filter fm-f の切り替え
@@ -1052,12 +1149,14 @@ function fmClick() {
             id.style.display ="block";
         }
         document.querySelector('#fm-f').classList.toggle('fm_off');
+        document.querySelector('#sp_fm-f').classList.toggle('fm_off');
     }else{
         for(var i = 0,id =""; i < fm_idlist.length; i++) {
             id = document.getElementById(fm_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#fm-f').classList.toggle('fm_off');
+        document.querySelector('#sp_fm-f').classList.toggle('fm_off');
     }
 }
 // filter tbd-f の切り替え
@@ -1085,12 +1184,14 @@ function tbdClick() {
             id.style.display ="block";
         }
         document.querySelector('#tbd-f').classList.toggle('tbd_off');
+        document.querySelector('#sp_tbd-f').classList.toggle('tbd_off');
     }else{
         for(var i = 0,id =""; i < tbd_idlist.length; i++) {
             id = document.getElementById(tbd_idlist[i]);
             id.style.display ="none";
         }
         document.querySelector('#tbd-f').classList.toggle('tbd_off');
+        document.querySelector('#sp_tbd-f').classList.toggle('tbd_off');
     }
 }
 

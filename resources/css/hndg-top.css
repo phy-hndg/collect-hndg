@@ -256,6 +256,11 @@ body.appear #container{
   height: auto;
 } 
 
+.PC_filter {
+  display: flex;
+  margin: 0 auto;
+}
+
 /*＝＝＝並び替えボタンのCSS*/
 .filter dt{
   font-weight: bold;
@@ -693,6 +698,18 @@ body.appear #container{
 .tbd {     width: 100%;     max-width: 100px;     margin-right: 10%;     border-radius: 10px;     text-align: center;     color: #fff;     border: 2px solid #8d8d8d;     background-color: #8d8d8d;   }
 .tbd_off {     color: #8d8d8d;     border: 2px solid #8d8d8d;     background-color: #1bd1ff00; }
 
+.SP_filter {
+  display: none;
+}
+.sp_plt {
+  display: none;
+}
+.sp_snd {
+  display: none;
+}
+.sp_tag {
+  display: none;
+}
 /*==================================================
 ギャラリーのためのcss
 ===================================*/
@@ -733,17 +750,21 @@ body.appear #container{
           width: calc(50% - 25px);
         }	
         .terms-container li {
-          font-size: 10px;
-          width: 50%;
-        }
-        .filter li{
-          margin:0 -15px;
+          font-size: 15px;
         }
         .filter ul li{
-          margin:5px 0px;
+          margin:5px 5px;
         }
         .sort li{
           margin:5px 2px;
           width: 50%;
         }
+    }
+    @media only screen and (max-width: 615px) {
+      .PC_filter {
+        display: none;
+      }
+      .SP_filter {
+        display: block;
+      }
     }
