@@ -154,7 +154,7 @@ h3 {
 }
 
 .textarea {
-    margin: 0% 20%;
+    margin: 0% 10%;
     padding: 20px;
     width: auto;
     height: auto;
@@ -175,6 +175,11 @@ p {
     }
 }
 
+@media screen and (max-width:840px) {
+	.about {
+		margin-top: 20%;
+	}
+}
 /*==================================================
 スライダーのためのcss
 ===================================*/
@@ -184,7 +189,14 @@ p {
 }
 
 /*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+#slider {
+	padding: 0%;
+}
 
 .slider .slick-slide {
     margin: 100px 0px;/*スライド左右の余白調整*/
+}
+
+.wrapper {
+	margin: 0% 10%;
 }
