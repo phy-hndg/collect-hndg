@@ -4,7 +4,7 @@
                 var todayM = (today.getMonth()+1);
                 var todayD = today.getDate();
                 // htmlfileのある場所
-                var todaypass = '../';
+                var todaypass = 'https://phy-hndg.github.io/collect-hndg/html/';
                 // 最終的に選ばれたhtmlファイルへのパス
                 var today_hndg_pass ='';
                 // sortされたデータを入れ込む
